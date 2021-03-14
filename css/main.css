@@ -18,7 +18,7 @@ body {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	flex-flow: row wrap;
+	flex-flow: column wrap;
 }
 
 h1,
@@ -29,7 +29,7 @@ h3 {
 	font-weight: 700;
 }
 h1 {
-	font-size: 1.875em
+	font-size: 1.875em;
 }
 h2 {
 	font-size: 1.125em;
@@ -46,19 +46,20 @@ p {
 
 /*The widths are in a percentage!*/
 header {
-	border-bottom: 3px solid #77a466;
 	margin: 0 auto;
 	display: flex;
-	justify-content: space-between;
-	align-items: stretch;
+	justify-content: center;
+	align-items: center;
 	flex-basis: auto;
-	flex-grow: 1;
+	flex-flow: column wrap;
 }
 
 header h1 {
+	border-bottom: 3px solid #77a466;
 	margin: 0;
 	padding: 38px 0;
-	align-items: flex-start;
+	width: 100%;
+	text-align: center;
 }
 header h1 span {
 	color: #77a466;
@@ -66,17 +67,18 @@ header h1 span {
 
 header nav {
 	padding: 46px 0;
+	width: 100%;
+	text-align: center;
 }
 header nav ul {
 	margin: 0;
-	padding: 0;
+	list-style-type: none;
 }
 header nav ul li {
 	text-transform: uppercase;
 	font-weight: 700;
 	font-size: 0.875em;
-	padding: 0 10px;
-	display: inline;
+	padding: 10px 30px;
 }
 header nav ul li a{
 	text-decoration: none;
@@ -89,11 +91,13 @@ header nav ul li a{
 	border-top: 1px solid #eee;
 	margin: 0 auto;
 	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-flow: wrap;
-	flex-basis: auto;
-	flex-grow: 1;
+	flex-flow: column wrap;
+	justify-content: flex-start;
+	align-items: flex-start;
+}
+
+.top-section {
+	flex-wrap: wrap;
 }
 
 .main-image {
@@ -122,7 +126,7 @@ header nav ul li a{
 .section-one,
 .section-two,
 .section-three {
-	width: 33%;
+	width: 100%;
 	height: auto;
 }
 
@@ -131,13 +135,12 @@ header nav ul li a{
 }
 
 .section-two {
-	border-left: 1px solid #eee;
-	border-right: 1px solid #eee;
+	border-top: 1px solid #eee;
+	border-bottom: 1px solid #eee;
 }
 
 .section-two h3,
 .section-three h3 {
-	padding: 10px 30px;
 }
 
 .menu {
@@ -153,11 +156,13 @@ header nav ul li a{
 	color: #333;
 	font-size: 1em;
 	line-height: 21px;
+	padding: 10px 30px;
 }
 
 .address {
 	font-size: 1em;
 	line-height: 24px;
+	padding: 0;
 }
 
 /*The widths are in a percentage!*/
@@ -167,7 +172,7 @@ footer {
 	text-align: center;
 	display: flex;
 	justify-content: center;
-	align-items: stretch;
+	align-items: center;
 	flex-basis: auto;
 	width: 100%
 }
