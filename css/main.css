@@ -1,3 +1,5 @@
+/****MOBILE STYLES****/
+
 html {
 	font-size: 16px;
 }
@@ -50,14 +52,13 @@ header {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	flex-basis: auto;
 	flex-flow: column wrap;
 }
 
 header h1 {
 	border-bottom: 3px solid #77a466;
 	margin: 0;
-	padding: 38px 0;
+	padding: 20px 0;
 	width: 100%;
 	text-align: center;
 }
@@ -66,7 +67,7 @@ header h1 span {
 }
 
 header nav {
-	padding: 46px 0;
+	padding: 20px 0;
 	width: 100%;
 	text-align: center;
 }
@@ -141,6 +142,7 @@ header nav ul li a{
 
 .section-two h3,
 .section-three h3 {
+	padding-left: 10px;
 }
 
 .menu {
@@ -181,4 +183,51 @@ footer span {
 	text-transform: lowercase;
 	color: #77a466;
 	font-size: 0.875em;
+}
+
+	/* Tablet styles here*/
+@media all and (min-width:768px) {
+		.bottom-section {
+			flex-flow: row nowrap;
+			justify-content: space-evenly;
+			align-items: flex-start;
+			flex-basis: auto;
+		}
+		.section-one {
+
+		}
+		.section-two {
+			border-left: 1px solid #eee;
+			border-right: 1px solid #eee;
+		}
+		.section-three{
+			padding-left: 20px;
+		}
+}
+	/*Desktop styles here*/
+@media all and (min-width:1200px) {
+	header{
+		flex-flow: row wrap;
+		align-items: flex-start;
+		justify-content: flex-start;
+	}
+
+	header nav {
+		width: 40%
+	}
+
+	header nav ul {
+		display: inline-flex;
+	}
+
+	header h1 {
+		width: 30%;
+		padding: 24px 0;
+		border-bottom: none;
+		text-align: left;
+	}
+
+	.top-section {
+		border-top: 3px solid #77a466;
+	}
 }
